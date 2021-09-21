@@ -1,0 +1,26 @@
+name: list5min
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+    - cron: '5 * * * *'
+    - cron: '10 * * * *'
+    - cron: '15 * * * *'
+    - cron: '20 * * * *'
+    - cron: '25 * * * *'
+    - cron: '30 * * * *'
+    - cron: '35 * * * *'
+    - cron: '40 * * * *'
+    - cron: '45 * * * *'
+    - cron: '50 * * * *'
+    - cron: '55 * * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: echo list5min
